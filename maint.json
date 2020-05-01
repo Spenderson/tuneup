@@ -1,8 +1,8 @@
 {
-    "year": 2016,
-    "make": "Hyundai",
-    "model": "Elantra",
-    "trim": "SE (1.8 liter 4 cyl)",
+    "Model Year": 2016,
+    "Make": "HYUNDAI",
+    "Model": "Elantra",
+    "Trim": "SE",
     "schedule": [
         {
             "when": "stop for fuel",
