@@ -1,3 +1,5 @@
+// be sure to include Particle's 'carloop' library when compiling
+
 
 /* Carloop mileage reminder app
  * Copyright 2016 1000 Tools, Inc.
@@ -8,7 +10,7 @@
  * In the cloud, set the event to send an SMS to the driver.
  */
 #include "application.h"
-#include "carloop.h"
+#include "carloop.h"    
 
 // https://docs.particle.io/tutorials/device-cloud/console/#product-tools
 //  Unlike compiling a binary for a single device, it is critical that the 
