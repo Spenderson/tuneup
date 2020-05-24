@@ -1,0 +1,92 @@
+Electron
+
+	Included in Particle's libraries is the struct "CANMessage" that looks like this:
+
+	struct CANMessage
+	{                      // type                    max dec        max hex                  max binary
+	                       // ----                    ----           ----                     ------
+	   uint32_t id;        // 32 bit unsigned         4,294,967,295  ffffffff                 1111 1111 1111 1111 1111 1111 1111 1111
+	   bool     extended;  // 1 bit                   1              1                        1
+	   bool     rtr;       // 1 bit                   1              1                        1
+	   uint8_t  len;       // 8 bits unsigned         255            ff                       1111 1111
+	   uint8_t  data[8];   // array: 8 bits unsigned  255            ff ff ff ff ff ff ff ff  1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111 1111
+	}
+
+
+CANbus
+
+	see https://en.wikipedia.org/wiki/CAN_bus#frames
+	
+	differences between CANMessage struct and actual data used in CANbus:
+		ID: CANMessage uses 32 bits, but standard CAN needs 11 bits and extended CAN needs 29
+		DLC (data length): CANMessage uses 8 bits for this number, even though CAN data will only ever have a maximum of 8 bytes
+		                   and 8 bits can represent any number between 0 and 255
+		
+		
+----------
+
+For OBD requests, 
+
+	From example Carloop programs: 
+	
+		OBD_CAN_BROADCAST_ID = 0X7DF;
+		OBD_CAN_REQUEST_ID   = 0x7E0;
+		
+	The PID query and response occurs on the vehicle's CAN bus. Standard OBD requests and responses use functional addresses.
+	The diagnostic reader initiates a query using CAN ID 7DFh, which acts as a broadcast address, and 
+	accepts responses from any ID in the range 7E8h to 7EFh. ECUs that can respond to OBD queries listen both to the functional 
+	broadcast ID of 7DFh and one assigned ID in the range 7E0h to 7E7h. Their response has an ID of their assigned ID plus 
+	8 e.g. 7E8h through 7EFh.
+	
+	Final verdict:
+	
+		message.id: should be 0x7DF for requesting all data, or 0x7E0-0x7E7 for requesting data from specific ECUs
+		message.len: always 8
+		message.data[0] = ? (example carloop_obd_publisher: "0 = single-frame format, 2  = num data bytes") Could be message length?
+		message.data[1] = service number (https://en.wikipedia.org/wiki/OBD-II_PIDs#Services) 'Before 2002, J1979 referred to these services as "modes".'
+		message.data[2] = PID (https://en.wikipedia.org/wiki/OBD-II_PIDs#Standard_PIDs)
+	
+
+For OBD responses, 
+
+	From example Carloop programs: 
+	
+		OBD_CAN_REPLY_ID_MIN = 0x7E8;
+		OBD_CAN_REPLY_ID_MAX = 0x7EF;
+		
+	From CSS ELECTRONICS video: "Note that 7E8 would typically be where the main engine or ECU responds at"
+		
+	Final verdict:
+	
+		message.id: should be 0x7E8-0x7EF depending on which ECU it came from
+		message.len: ?
+		message.data[0] = message length in bytes, 0-8
+		message.data[1] = service number, should be 41-4A, corresponding to request service numbers 01-0A (just change the 0 to a 4)
+		message.data[2] = PID
+		message.data[3] = A byte
+		message.data[4] = B byte
+		message.data[5] = C byte
+		message.data[6] = D byte
+		message.data[7] = 
+	
+		
+	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

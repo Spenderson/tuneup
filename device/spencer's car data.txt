@@ -1,0 +1,582 @@
+
+07df 8 02 01 00 55 55 55 55 55
+	07e8 8 06 41 00 be 3e a8 13 aa
+	07e9 8 06 41 00 80 00 00 01 aa
+	
+	Service 01, PID 00: "PIDs supported [01 - 20]"
+	
+	Response from ECU 07e8: be3ea813 (1011 1110 0011 1110 1010 1000 0001 0011‬)
+		so, it supports:
+			1  01  4	Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)				Bit encoded. See below
+			0  02  2	Freeze DTC				
+			1  03  2	Fuel system status				Bit encoded. See below
+			1  04  1	Calculated engine load	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A} (or {\displaystyle {\tfrac {A}{2.55}}}{\displaystyle {\tfrac {A}{2.55}}})
+			1  05  1	Engine coolant temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+			1  06  1	Short term fuel trim—Bank 1	-100 (Reduce Fuel: Too Rich)	99.2 (Add Fuel: Too Lean)	%	
+			1  07  1	Long term fuel trim—Bank 1
+			0  08  1	Short term fuel trim—Bank 2
+			0  09  1	Long term fuel trim—Bank 2
+			0  0a  1	Fuel pressure (gauge pressure)	0	765	kPa	{\displaystyle 3A}{\displaystyle 3A}
+			1  0b  1	Intake manifold absolute pressure	0	255	kPa	{\displaystyle A}A
+			1  0c  2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}}{\displaystyle {\frac {256A+B}{4}}}
+			1  0d  1	Vehicle speed	0	255	km/h	{\displaystyle A}A
+			1  0e  1	Timing advance	-64	63.5	° before TDC	{\displaystyle {\frac {A}{2}}-64}{\displaystyle {\frac {A}{2}}-64}
+			1  0f  1	Intake air temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+			0  10  2	MAF air flow rate	0	655.35	grams/sec	{\displaystyle {\frac {256A+B}{100}}}{\displaystyle {\frac {256A+B}{100}}}
+			1  11  1	Throttle position	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+			0  12  1	Commanded secondary air status				Bit encoded. See below
+			1  13  1	Oxygen sensors present (in 2 banks)				[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...
+			0  14  2	Oxygen Sensor 1 A: Voltage B: Short term fuel trim	0
+			1  15  2	Oxygen Sensor 2 A: Voltage B: Short term fuel trim
+			0  16  2	Oxygen Sensor 3 A: Voltage B: Short term fuel trim
+			0  17  2	Oxygen Sensor 4 A: Voltage B: Short term fuel trim
+			0  18  2	Oxygen Sensor 5 A: Voltage B: Short term fuel trim
+			0  19  2	Oxygen Sensor 6 A: Voltage B: Short term fuel trim
+			0  1a  2	Oxygen Sensor 7 A: Voltage B: Short term fuel trim
+			0  1b  2	Oxygen Sensor 8 A: Voltage B: Short term fuel trim
+			1  1c  1	OBD standards this vehicle conforms to	1	250	-	enumerated. See below
+			0  1d  1	Oxygen sensors present (in 4 banks)				Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]
+			0  1e  1	Auxiliary input status				A0 == Power Take Off (PTO) status (1 == active) [A1..A7] not used
+			1  1f  2	Run time since engine start	0	65,535	seconds	{\displaystyle 256A+B}{\displaystyle 256A+B}
+			1‬  20  4	PIDs supported [21 - 40]
+	
+	Response from ECU 07e9: 80000001 (1000 0000 0000 0000 0000 0000 0000 0001‬‬)
+		so, it supports:
+			1  01  4	Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)				Bit encoded. See below
+			0  02  2	Freeze DTC				
+			0  03  2	Fuel system status				Bit encoded. See below
+			0  04  1	Calculated engine load	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A} (or {\displaystyle {\tfrac {A}{2.55}}}{\displaystyle {\tfrac {A}{2.55}}})
+			0  05  1	Engine coolant temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+			0  06  1	Short term fuel trim—Bank 1	-100 (Reduce Fuel: Too Rich)	99.2 (Add Fuel: Too Lean)	%	
+			0  07  1	Long term fuel trim—Bank 1
+			0  08  1	Short term fuel trim—Bank 2
+			0  09  1	Long term fuel trim—Bank 2
+			0  0a  1	Fuel pressure (gauge pressure)	0	765	kPa	{\displaystyle 3A}{\displaystyle 3A}
+			0  0b  1	Intake manifold absolute pressure	0	255	kPa	{\displaystyle A}A
+			0  0c  2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}}{\displaystyle {\frac {256A+B}{4}}}
+			0  0d  1	Vehicle speed	0	255	km/h	{\displaystyle A}A
+			0  0e  1	Timing advance	-64	63.5	° before TDC	{\displaystyle {\frac {A}{2}}-64}{\displaystyle {\frac {A}{2}}-64}
+			0  0f  1	Intake air temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+			0  10  2	MAF air flow rate	0	655.35	grams/sec	{\displaystyle {\frac {256A+B}{100}}}{\displaystyle {\frac {256A+B}{100}}}
+			0  11  1	Throttle position	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+			0  12  1	Commanded secondary air status				Bit encoded. See below
+			0  13  1	Oxygen sensors present (in 2 banks)				[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...
+			0  14  2	Oxygen Sensor 1 A: Voltage B: Short term fuel trim	0
+			0  15  2	Oxygen Sensor 2 A: Voltage B: Short term fuel trim
+			0  16  2	Oxygen Sensor 3 A: Voltage B: Short term fuel trim
+			0  17  2	Oxygen Sensor 4 A: Voltage B: Short term fuel trim
+			0  18  2	Oxygen Sensor 5 A: Voltage B: Short term fuel trim
+			0  19  2	Oxygen Sensor 6 A: Voltage B: Short term fuel trim
+			0  1a  2	Oxygen Sensor 7 A: Voltage B: Short term fuel trim
+			0  1b  2	Oxygen Sensor 8 A: Voltage B: Short term fuel trim
+			0  1c  1	OBD standards this vehicle conforms to	1	250	-	enumerated. See below
+			0  1d  1	Oxygen sensors present (in 4 banks)				Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]
+			0  1e  1	Auxiliary input status				A0 == Power Take Off (PTO) status (1 == active) [A1..A7] not used
+			0  1f  2	Run time since engine start	0	65,535	seconds	{\displaystyle 256A+B}{\displaystyle 256A+B}
+			1‬  20  4	PIDs supported [21 - 40]
+		
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 01 55 55 55 55 55
+	07e8 8 06 41 01 00 07 e5 00 aa
+	07e9 8 06 41 01 00 04 00 00 aa
+	
+	Service 01, PID 01: "Monitor status since DTCs cleared. (Includes malfunction indicator lamp (MIL) status and number of DTCs.)"
+	
+	Response from ECU 07e8: 00 07 e5 00 (‬00000000 00000111 11100101 00000000‬)
+		0  A7: 1 if CEL is on, 0 if not
+		0000000  A6 - A0: Number of DTCs flagged in the ECU
+		0  B7:  Reserved (should be 0)
+		0  B6:  Components test incomplete
+		0  B5:  Fuel system test incomplete
+		0  B4:  Misfire test incomplete
+		0  B3:  0 = Spark ignition monitors supported (e.g. Otto or Wankel engines), 1 = Compression ignition monitors supported (e.g. Diesel engines)
+		1  B2:  Components test available
+		1  B1:  Fuel system test available
+		1  B0:  Misfire test available
+		1  C7:  EGR System           test available
+		1  C6:  Oxygen Sensor Heater test available
+		1  C5:  Oxygen Sensor        test available
+		0  C4:  A/C Refrigerant      test available
+		0  C3:  Secondary Air System test available
+		1  C2:  Evaporative System   test available
+		0  C1:  Heated Catalyst      test available
+		1  C0:  Catalyst             test available
+		0  D7:  EGR System           test incomplete
+		0  D6:  Oxygen Sensor Heater test incomplete
+		0  D5:  Oxygen Sensor        test incomplete
+		0  D4:  A/C Refrigerant      test incomplete
+		0  D3:  Secondary Air System test incomplete
+		0  D2:  Evaporative System   test incomplete
+		0  D1:  Heated Catalyst      test incomplete
+		0‬  D0:  Catalyst             test incomplete
+	
+	Response from ECU 07e9: 00 04 00 00 (00000000 00000100 ‬00000000 00000000)
+		0  A7: 1 if CEL is on, 0 if not
+		0000000  A6 - A0: Number of DTCs flagged in the ECU
+		0  B7:  Reserved (should be 0)
+		0  B6:  Components test incomplete
+		0  B5:  Fuel system test incomplete
+		0  B4:  Misfire test incomplete
+		0  B3:  0 = Spark ignition monitors supported (e.g. Otto or Wankel engines), 1 = Compression ignition monitors supported (e.g. Diesel engines)
+		1  B2:  Components test available
+		0  B1:  Fuel system test available
+		0  B0:  Misfire test available
+		0  C7:  EGR System           test available
+		0  C6:  Oxygen Sensor Heater test available
+		0  C5:  Oxygen Sensor        test available
+		0  C4:  A/C Refrigerant      test available
+		0  C3:  Secondary Air System test available
+		0  C2:  Evaporative System   test available
+		0  C1:  Heated Catalyst      test available
+		0  C0:  Catalyst             test available
+		0  D7:  EGR System           test incomplete
+		0  D6:  Oxygen Sensor Heater test incomplete
+		0  D5:  Oxygen Sensor        test incomplete
+		0  D4:  A/C Refrigerant      test incomplete
+		0  D3:  Secondary Air System test incomplete
+		0  D2:  Evaporative System   test incomplete
+		0  D1:  Heated Catalyst      test incomplete
+		0  D0:  Catalyst             test incomplete
+	
+	
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 02 55 55 55 55 55
+	no response
+	
+	Service 01, PID 02: "Freeze DTC"
+	
+	Wiki: "...PID 02, which is only available in service 02."
+	so it makes sense that we didn't get a response
+	
+	
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 03 55 55 55 55 55
+	07e8 8 04 41 03 01 00 aa aa aa
+	
+	Service 01, PID 03: "Fuel system status"
+	
+	Response: 01 00
+		2 bytes, first describes fuel system #1, second describes fuel system #2 (if it exists)
+			1	Open loop due to insufficient engine temperature
+			2	Closed loop, using oxygen sensor feedback to determine fuel mix
+			4	Open loop due to engine load OR fuel cut due to deceleration
+			8	Open loop due to system failure
+			16	Closed loop, using at least one oxygen sensor but there is a fault in the feedback system
+		So looks like we got a "Fuel system #1: Open loop due to insufficient engine temperature" and nothing for fuel system #2.
+	
+	
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 04 55 55 55 55 55
+	07e8 8 03 41 04 5f aa aa aa aa
+	
+	Service 01, PID 04: "Calculated engine load"
+	
+	Response: 5f
+		5f in decimal is 95. According to wiki's formula, 95 / 2.55 = 37.26%
+	
+	
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 05 55 55 55 55 55
+	07e8 8 03 41 05 3d aa aa aa aa
+	
+	Service 01, PID 05: "Engine coolant temperature"
+	
+	Response: 3d
+		3d in decimal is 61. According to wiki's formula, 61 - 40 = 21C, or 69.8F
+	
+	
+	
+----------------------------------------------------------------------------------
+07df 8 02 01 06 55 55 55 55 55
+	07e8 8 03 41 06 80 aa aa aa aa
+	
+	Service 01, PID 06: "Short term fuel trim—Bank 1"
+	
+	Response: 80
+		80 in decimal is 128. According to wiki's formula, (128 / 1.28) - 100 = 0%
+		(Does it make sense that fuel trim is 0% when the car is off?)
+	
+	
+	
+----------------------------------------------------------------------------------
+
+07df 8 02 01 07 55 55 55 55 55
+				1  07  1	Long term fuel trim—Bank 1
+	07e8 8 03 41 07 84 aa aa aa aa
+
+----------------------------------------------------------------------------------
+07df 8 02 01 08 55 55 55 55 55
+			0  08  1	Short term fuel trim—Bank 2
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 09 55 55 55 55 55
+			0  09  1	Long term fuel trim—Bank 2
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 0a 55 55 55 55 55
+			0  0a  1	Fuel pressure (gauge pressure)	0	765	kPa	{\displaystyle 3A}{\displaystyle 3A}
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 0b 55 55 55 55 55
+			1  0b  1	Intake manifold absolute pressure	0	255	kPa	{\displaystyle A}A
+	07e8 8 03 41 0b 63 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 0c 55 55 55 55 55
+			1  0c  2	Engine RPM	0	16,383.75	rpm	{\displaystyle {\frac {256A+B}{4}}}{\displaystyle {\frac {256A+B}{4}}}
+	07e8 8 04 41 0c 00 00 aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 0d 55 55 55 55 55
+			1  0d  1	Vehicle speed	0	255	km/h	{\displaystyle A}A
+	07e8 8 03 41 0d 00 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 0e 55 55 55 55 55
+			1  0e  1	Timing advance	-64	63.5	° before TDC	{\displaystyle {\frac {A}{2}}-64}{\displaystyle {\frac {A}{2}}-64}
+	07e8 8 03 41 0e 39 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 0f 55 55 55 55 55
+			1  0f  1	Intake air temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+	07e8 8 03 41 0f 37 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 10 55 55 55 55 55
+			0  10  2	MAF air flow rate	0	655.35	grams/sec	{\displaystyle {\frac {256A+B}{100}}}{\displaystyle {\frac {256A+B}{100}}}
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 11 55 55 55 55 55
+			1  11  1	Throttle position	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+	07e8 8 03 41 11 28 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 12 55 55 55 55 55
+			0  12  1	Commanded secondary air status				Bit encoded. See below
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 13 55 55 55 55 55
+			1  13  1	Oxygen sensors present (in 2 banks)				[A0..A3] == Bank 1, Sensors 1-4. [A4..A7] == Bank 2...
+	07e8 8 03 41 13 03 aa aa aa aa
+----------------------------------------------------------------------------------
+07df 8 02 01 14 55 55 55 55 55
+			0  14  2	Oxygen Sensor 1 A: Voltage B: Short term fuel trim	0
+	...No reponse
+----------------------------------------------------------------------------------
+07df 8 02 01 15 55 55 55 55 55
+			1  15  2	Oxygen Sensor 2 A: Voltage B: Short term fuel trim
+	07e8 8 04 41 15 54 ff aa aa aa
+
+----------------------------------------------------------------------------------
+07df 8 02 01 16 55 55 55 55 55
+			0  16  2	Oxygen Sensor 3 A: Voltage B: Short term fuel trim
+	...No reponse
+
+----------------------------------------------------------------------------------
+07df 8 02 01 17 55 55 55 55 55
+			0  17  2	Oxygen Sensor 4 A: Voltage B: Short term fuel trim
+
+...No reponse
+
+----------------------------------------------------------------------------------
+07df 8 02 01 18 55 55 55 55 55
+			0  18  2	Oxygen Sensor 5 A: Voltage B: Short term fuel trim
+
+...No reponse
+
+----------------------------------------------------------------------------------
+07df 8 02 01 19 55 55 55 55 55
+			0  19  2	Oxygen Sensor 6 A: Voltage B: Short term fuel trim
+
+...No reponse
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1a 55 55 55 55 55
+			0  1a  2	Oxygen Sensor 7 A: Voltage B: Short term fuel trim
+
+...No reponse
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1b 55 55 55 55 55
+			0  1b  2	Oxygen Sensor 8 A: Voltage B: Short term fuel trim
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1c 55 55 55 55 55
+			1  1c  1	OBD standards this vehicle conforms to	1	250	-	enumerated. See below
+
+...Response received
+07e8 8 03 41 1c 01 aa aa aa aa
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1d 55 55 55 55 55
+			0  1d  1	Oxygen sensors present (in 4 banks)				Similar to PID 13, but [A0..A7] == [B1S1, B1S2, B2S1, B2S2, B3S1, B3S2, B4S1, B4S2]
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1e 55 55 55 55 55
+			0  1e  1	Auxiliary input status				A0 == Power Take Off (PTO) status (1 == active) [A1..A7] not used
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 1f 55 55 55 55 55
+			1  1f  2	Run time since engine start	0	65,535	seconds	{\displaystyle 256A+B}{\displaystyle 256A+B}
+
+...Response received
+07e8 8 04 41 1f 00 00 aa aa aa
+
+----------------------------------------------------------------------------------
+07df 8 02 01 20 55 55 55 55 55
+			PIDs supported [21 - 40]
+
+...Response received
+07e8 8 06 41 20 80 07 f0 15 aa
+	from ECU 7E8: 8007f015 (10000000000001111111000000010101‬)
+		1  21	33	2	Distance traveled with malfunction indicator lamp (MIL) on	0	65,535	km	{\displaystyle 256A+B}{\displaystyle 256A+B}
+		0  22	34	2	Fuel Rail Pressure (relative to manifold vacuum)	0	5177.265	kPa	{\displaystyle 0.079(256A+B)}{\displaystyle 0.079(256A+B)}
+		0  23	35	2	Fuel Rail Gauge Pressure (diesel, or gasoline direct injection)	0	655,350	kPa	{\displaystyle 10(256A+B)}{\displaystyle 10(256A+B)}
+		0  24	36	4	Oxygen Sensor 1
+		0  25	37	4	Oxygen Sensor 2
+		0  26	38	4	Oxygen Sensor 3
+		0  27	39	4	Oxygen Sensor 4
+		0  28	40	4	Oxygen Sensor 5
+		0  29	41	4	Oxygen Sensor 6
+		0  2A	42	4	Oxygen Sensor 7
+		0  2B	43	4	Oxygen Sensor 8
+		0  2C	44	1	Commanded EGR	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  2D	45	1	EGR Error	-100	99.2	%	{\displaystyle {\tfrac {100}{128}}A-100}{\displaystyle {\tfrac {100}{128}}A-100}
+		1  2E	46	1	Commanded evaporative purge	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		1  2F	47	1	Fuel Tank Level Input	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		1  30	48	1	Warm-ups since codes cleared	0	255	count	{\displaystyle A}A
+		1  31	49	2	Distance traveled since codes cleared	0	65,535	km	{\displaystyle 256A+B}{\displaystyle 256A+B}
+		1  32	50	2	Evap. System Vapor Pressure	-8,192	8191.75	Pa	{\displaystyle {\frac {256A+B}{4}}}{\displaystyle {\frac {256A+B}{4}}}
+		1  33	51	1	Absolute Barometric Pressure	0	255	kPa	{\displaystyle A}A
+		1  34	52	4	Oxygen Sensor 1
+		0  35	53	4	Oxygen Sensor 2
+		0  36	54	4	Oxygen Sensor 3
+		0  37	55	4	Oxygen Sensor 4
+		0  38	56	4	Oxygen Sensor 5
+		0  39	57	4	Oxygen Sensor 6
+		0  3A	58	4	Oxygen Sensor 7
+		0  3B	59	4	Oxygen Sensor 8
+		1  3C	60	2	Catalyst Temperature: Bank 1, Sensor 1	-40	6,513.5	°C	{\displaystyle {\frac {256A+B}{10}}-40}{\displaystyle {\frac {256A+B}{10}}-40}
+		0  3D	61	2	Catalyst Temperature: Bank 2, Sensor 1
+		1  3E	62	2	Catalyst Temperature: Bank 1, Sensor 2
+		0  3F	63	2	Catalyst Temperature: Bank 2, Sensor 2
+		1  40	64	4	PIDs supported [41 - 60]
+
+...Response received
+07e9 8 06 41 20 00 01 80 00 aa
+	from ECU 7E9: 00018000 (00000000000000011000000000000000)
+		0  21	33	2	Distance traveled with malfunction indicator lamp (MIL) on	0	65,535	km	{\displaystyle 256A+B}{\displaystyle 256A+B}
+		0  22	34	2	Fuel Rail Pressure (relative to manifold vacuum)	0	5177.265	kPa	{\displaystyle 0.079(256A+B)}{\displaystyle 0.079(256A+B)}
+		0  23	35	2	Fuel Rail Gauge Pressure (diesel, or gasoline direct injection)	0	655,350	kPa	{\displaystyle 10(256A+B)}{\displaystyle 10(256A+B)}
+		0  24	36	4	Oxygen Sensor 1
+		0  25	37	4	Oxygen Sensor 2
+		0  26	38	4	Oxygen Sensor 3
+		0  27	39	4	Oxygen Sensor 4
+		0  28	40	4	Oxygen Sensor 5
+		0  29	41	4	Oxygen Sensor 6
+		0  2A	42	4	Oxygen Sensor 7
+		0  2B	43	4	Oxygen Sensor 8
+		0  2C	44	1	Commanded EGR	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  2D	45	1	EGR Error	-100	99.2	%	{\displaystyle {\tfrac {100}{128}}A-100}{\displaystyle {\tfrac {100}{128}}A-100}
+		0  2E	46	1	Commanded evaporative purge	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  2F	47	1	Fuel Tank Level Input	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		1  30	48	1	Warm-ups since codes cleared	0	255	count	{\displaystyle A}A
+		1  31	49	2	Distance traveled since codes cleared	0	65,535	km	{\displaystyle 256A+B}{\displaystyle 256A+B}
+		0  32	50	2	Evap. System Vapor Pressure	-8,192	8191.75	Pa	{\displaystyle {\frac {256A+B}{4}}}{\displaystyle {\frac {256A+B}{4}}}
+		0  33	51	1	Absolute Barometric Pressure	0	255	kPa	{\displaystyle A}A
+		0  34	52	4	Oxygen Sensor 1
+		0  35	53	4	Oxygen Sensor 2
+		0  36	54	4	Oxygen Sensor 3
+		0  37	55	4	Oxygen Sensor 4
+		0  38	56	4	Oxygen Sensor 5
+		0  39	57	4	Oxygen Sensor 6
+		0  3A	58	4	Oxygen Sensor 7
+		0  3B	59	4	Oxygen Sensor 8
+		0  3C	60	2	Catalyst Temperature: Bank 1, Sensor 1	-40	6,513.5	°C	{\displaystyle {\frac {256A+B}{10}}-40}{\displaystyle {\frac {256A+B}{10}}-40}
+		0  3D	61	2	Catalyst Temperature: Bank 2, Sensor 1
+		0  3E	62	2	Catalyst Temperature: Bank 1, Sensor 2
+		0  3F	63	2	Catalyst Temperature: Bank 2, Sensor 2
+		0  40	64	4	PIDs supported [41 - 60]
+
+----------------------------------------------------------------------------------
+07df 8 02 01 40 55 55 55 55 55
+		PIDs supported [41 - 60]
+
+...Response received
+07e8 8 06 41 40 fe dc 8c 00 aa
+	from ECU 7E8: fedc8c00 (11111110110111001000110000000000‬)
+		1  41	65	4	Monitor status this drive cycle				Bit encoded. See below
+		1  42	66	2	Control module voltage	0	65.535	V	{\displaystyle {\frac {256A+B}{1000}}}{\displaystyle {\frac {256A+B}{1000}}}
+		1  43	67	2	Absolute load value	0	25,700	%	{\displaystyle {\tfrac {100}{255}}(256A+B)}{\displaystyle {\tfrac {100}{255}}(256A+B)}
+		1  44	68	2	Fuel–Air commanded equivalence ratio	0	< 2	ratio	{\displaystyle {\tfrac {2}{65536}}(256A+B)}{\displaystyle {\tfrac {2}{65536}}(256A+B)}
+		1  45	69	1	Relative throttle position	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		1  46	70	1	Ambient air temperature	-40	215	°C	{\displaystyle A-40}{\displaystyle A-40}
+		1  47	71	1	Absolute throttle position B	0	100	%	{\displaystyle {\frac {100}{255}}A}{\displaystyle {\frac {100}{255}}A}
+		0  48	72	1	Absolute throttle position C
+		1  49	73	1	Accelerator pedal position D
+		1  4A	74	1	Accelerator pedal position E
+		0  4B	75	1	Accelerator pedal position F
+		1  4C	76	1	Commanded throttle actuator
+		1  4D	77	2	Time run with MIL on	0	65,535	minutes	{\displaystyle 256A+B}{\displaystyle 256A+B}
+		1  4E	78	2	Time since trouble codes cleared
+		0  4F	79	4	Maximum value for Fuel–Air equivalence ratio, oxygen sensor voltage, oxygen sensor current, and intake manifold absolute pressure	0, 0, 0, 0	255, 255, 255, 2550	ratio, V, mA, kPa	A, B, C, D*10
+		0  50	80	4	Maximum value for air flow rate from mass air flow sensor	0	2550	g/s	A*10, B, C, and D are reserved for future use
+		1  51	81	1	Fuel Type				From fuel type table see below
+		0  52	82	1	Ethanol fuel %	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  53	83	2	Absolute Evap system Vapor Pressure	0	327.675	kPa	{\displaystyle {\frac {256A+B}{200}}}{\displaystyle {\frac {256A+B}{200}}}
+		0  54	84	2	Evap system vapor pressure	-32,767	32,768	Pa	((A*256)+B)-32767
+		1  55	85	2	Short term secondary oxygen sensor trim, A: bank 1, B: bank 3	-100	99.2	%	{\displaystyle {\frac {100}{128}}A-100}{\displaystyle {\frac {100}{128}}A-100}
+		1  56	86	2	Long term secondary oxygen sensor trim, A: bank 1, B: bank 3
+		0  57	87	2	Short term secondary oxygen sensor trim, A: bank 2, B: bank 4
+		0  58	88	2	Long term secondary oxygen sensor trim, A: bank 2, B: bank 4
+		0  59	89	2	Fuel rail absolute pressure	0	655,350	kPa	{\displaystyle 10(256A+B)}{\displaystyle 10(256A+B)}
+		0  5A	90	1	Relative accelerator pedal position	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  5B	91	1	Hybrid battery pack remaining life	0	100	%	{\displaystyle {\tfrac {100}{255}}A}{\displaystyle {\tfrac {100}{255}}A}
+		0  5C	92	1	Engine oil temperature	-40	210	°C	{\displaystyle A-40}{\displaystyle A-40}
+		0  5D	93	2	Fuel injection timing	-210.00	301.992	°	{\displaystyle {\frac {256A+B}{128}}-210}{\displaystyle {\frac {256A+B}{128}}-210}
+		0  5E	94	2	Engine fuel rate	0	3212.75	L/h	{\displaystyle {\frac {256A+B}{20}}}{\displaystyle {\frac {256A+B}{20}}}
+		0  5F	95	1	Emission requirements to which vehicle is designed				Bit Encoded
+		0‬  60	96	4	PIDs supported [61 - 80]
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 60 55 55 55 55 55
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 80 55 55 55 55 55
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 a0 55 55 55 55 55
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 01 c0 55 55 55 55 55
+
+...No reponse
+
+
+----------------------------------------------------------------------------------
+07df 8 02 09 00 55 55 55 55 55
+
+...Response received
+07e8 8 06 49 00 55 40 00 00 aa
+	from ECU 7E8: 55400000 (01010101010000000000000000000000‬)
+		0  01	1	            VIN Message Count in PID 02. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				Usually the value will be 5.
+		1  02	17	            Vehicle Identification Number (VIN)				17-char VIN, ASCII-encoded and left-padded with null chars (0x00) if needed to.
+		0  03	1	            Calibration ID message count for PID 04. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				It will be a multiple of 4 (4 messages are needed for each ID).
+		1  04	16,32,48,64..	Calibration ID				Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)
+		0  05	1	            Calibration verification numbers (CVN) message count for PID 06. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				
+		1  06	4,8,12,16	    Calibration Verification Numbers (CVN) Several CVN can be output (4 bytes each) the number of CVN and CALID must match				Raw data left-padded with null characters (0x00). Usually displayed as hex string.
+		0  07	1	            In-use performance tracking message count for PID 08 and 0B. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.	8	10		8 if sixteen (16) values are required to be reported, 9 if eighteen (18) values are required to be reported, and 10 if twenty (20) values are required to be reported (one message reports two values, each one consisting in two bytes).
+		1  08	4	            In-use performance tracking for spark ignition vehicles				4 or 5 messages, each one containing 4 bytes (two values). See below
+		0  09	1	            ECU name message count for PID 0A				
+		1  0A	20	            ECU name				ASCII-coded. Right-padded with null chars (0x00).
+		0  0B	4	            In-use performance tracking for compression ignition vehicles				5 messages, each one containing 4 bytes (two values). See below
+
+...Response received
+07e9 8 06 49 00 14 40 00 00 aa
+	from ECU 7E8: 14400000 (00010100010000000000000000000000‬‬)
+		0 01	1	            VIN Message Count in PID 02. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				Usually the value will be 5.
+		0 02	17	            Vehicle Identification Number (VIN)				17-char VIN, ASCII-encoded and left-padded with null chars (0x00) if needed to.
+		0 03	1	            Calibration ID message count for PID 04. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				It will be a multiple of 4 (4 messages are needed for each ID).
+		1 04	16,32,48,64..	Calibration ID				Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)
+		0 05	1	            Calibration verification numbers (CVN) message count for PID 06. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				
+		1 06	4,8,12,16	    Calibration Verification Numbers (CVN) Several CVN can be output (4 bytes each) the number of CVN and CALID must match				Raw data left-padded with null characters (0x00). Usually displayed as hex string.
+		0 07	1	            In-use performance tracking message count for PID 08 and 0B. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.	8	10		8 if sixteen (16) values are required to be reported, 9 if eighteen (18) values are required to be reported, and 10 if twenty (20) values are required to be reported (one message reports two values, each one consisting in two bytes).
+		0 08	4	            In-use performance tracking for spark ignition vehicles				4 or 5 messages, each one containing 4 bytes (two values). See below
+		0 09	1	            ECU name message count for PID 0A				
+		1 0A	20	            ECU name				ASCII-coded. Right-padded with null chars (0x00).
+		0 0B	4	            In-use performance tracking for compression ignition vehicles				5 messages, each one containing 4 bytes (two values). See below
+
+----------------------------------------------------------------------------------
+07df 8 02 09 01 55 55 55 55 55
+		0  01	1	            VIN Message Count in PID 02. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				Usually the value will be 5.
+null
+
+----------------------------------------------------------------------------------
+07df 8 02 09 02 55 55 55 55 55
+		1  02	17	            Vehicle Identification Number (VIN)				17-char VIN, ASCII-encoded and left-padded with null chars (0x00) if needed to.
+		VIN on the windshield says 5NPDH4AE8GH690573
+		
+	Response: 07e8 8 10 14 49 02 01 35 4e 50
+	
+		segment   ASCII value              possible meaning 
+		---------------------------------------------------------
+		1                                  means extended message (see https://en.wikipedia.org/wiki/ISO_15765-2)
+		014                                length of the extended message, According to Carloop forum post about reading VIN
+		49        1                        Service 49 (response for service 09)
+		02        STX (start of text)      PID 02
+		01        SOH (start of heading)   ?
+		35        5
+		4e        N
+		50        P
+	
+
+----------------------------------------------------------------------------------
+07df 8 02 09 03 55 55 55 55 55
+		0  03	1	            Calibration ID message count for PID 04. Only for ISO 9141-2, ISO 14230-4 and SAE J1850.				It will be a multiple of 4 (4 messages are needed for each ID).
+null
+
+----------------------------------------------------------------------------------
+07df 8 02 09 04 55 55 55 55 55
+		1  04	16,32,48,64..	Calibration ID				Up to 16 ASCII chars. Data bytes not used will be reported as null bytes (0x00). Several CALID can be outputed (16 bytes each)
+
+07e8 8 10 13 49 04 01 4d 44 36
+07e9 8 10 13 49 04 01 54 55 44
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
