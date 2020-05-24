@@ -3,6 +3,7 @@
 // Description : Plug device into my car and publish an overview of all the info it finds
 // Author      : Spencer Henderson
 // Date        : 01MAY2020
+// Info        : Compile this .ino file with Particle's 'carloop' library to create a firmware .bin file to then flash onto a Particle device
 // ------------------------------------------------------------------------------
 
 #include <carloop.h>               // forward declare all Carloop things not in this program
@@ -11,10 +12,8 @@ CANChannel can(CAN_D1_D2);         // connect to the CAN bus on pins D1 and D2. 
 SYSTEM_MODE(AUTOMATIC);
 
 void setup() {
-
   Serial.begin();  // prime to send data over USB cable
-	carloop.begin(); // start listening for data at a default baud rate of 500k
-
+  carloop.begin(); // start listening for data at a default baud rate of 500k
 }
 
 void loop() {
