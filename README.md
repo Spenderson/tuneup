@@ -1,3 +1,3 @@
-# Tune Up
+# TuneUp
 
-This is the Github folder for collaboration on Tune Up - the system that keeps track of personal car maintenance.
+This is the Github folder for collaboration on TuneUp - the system that handles personal car maintenance.
