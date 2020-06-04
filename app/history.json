@@ -1,0 +1,27 @@
+{
+    "vin": "1HGBH41JXMN109186",
+    "history": [
+        {
+            "mileage": 63400,
+            "date": "06JAN2020",
+            "who": "Myself",
+            "done": [
+                "replace engine oil",
+                "check coolant level in the engine coolant reservior",
+                "check windshield washer fluid level",
+                "check for low or under-inflated tires"
+            ]
+        },
+        {
+            "mileage": 65962,
+            "date": "23MAR2020",
+            "who": "Jiffy Lube",
+            "done": [
+                "rotate tires",
+                "inspect air filter",
+                "lube hood hinges",
+                "refill powersteering fluid"
+            ]
+        }
+    ]
+}
