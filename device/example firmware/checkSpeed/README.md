@@ -8,4 +8,4 @@ It's a good idea to have someone else operate the phone while you drive, since h
 
 It requires the `carloop` library. 
 
-The program can be edited to request any OBD-II information from your car from your phone while it's on. Reach out to Spencer for more info.
+The program can be edited to allow your phone (through the Particle cloud console) to request any OBD-II information from your car while the car is on. Reach out to Spencer for more info.
