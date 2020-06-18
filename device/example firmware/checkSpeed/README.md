@@ -1,6 +1,6 @@
 ## checkSpeed
 
-This is a program you can upload to the Electron/Carloop, then plug the device into your car's OBD-II port, then use Particle cloud console on your phone to request the speed (km/h) from your car while driving. 
+This is a program you can flash to the Electron/Carloop, then plug the device into your car's OBD-II port, then use Particle cloud console on your phone to request the speed (km/h) from your car while driving. 
 
 ![alt text](https://github.com/spenderson/tuneup/blob/master/device/example%20firmware/checkSpeed/image.png)
 
