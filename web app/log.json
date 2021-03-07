@@ -1,0 +1,503 @@
+{
+  "year": "2016",
+  "tasklist": [
+    {
+      "frequency": "twice a year",
+      "tasks": [
+        {
+          "task": "Check radiator, heater and air conditioning hoses for leaks or damage",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Check windshield washer spray and wiper operation. Clean wiper blades with clean cloth dampened with washer fluid",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Check headlight alignment",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Check muffler, exhaust pipes, shields and clamps",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Check the seat belts for wear and function",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "every 7,500 miles (12,000 km) or 6 months",
+      "tasks": [
+        {
+          "task": "Rotate tires",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They put 'doesnt need it, good tires already in front.' so I dont think they did it"
+            }
+          ]
+        },
+        {
+          "task": "Inspect battery condition",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Inspect air cleaner filter",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Inspect vacuum hose",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Replace engine oil and filter",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "Add fuel additive",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "once a year",
+      "tasks": [
+        {
+          "task": "clean body and door drain holes",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "lubricate door hinges and hood hinges",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "lubricate door and hood locks and latches",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "lubricate door rubber weather strips",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "check the air conditioning system",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect and lubricate automatic transaxle linkage and controls",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "clean the battery and terminals",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They checked off the box on my checklist and wrote, 'cleaned them'"
+            }
+          ]
+        },
+        {
+          "task": "check the brake/clutch fluid level",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "every 15,000 miles (24,000 km) or 12 months",
+      "tasks": [
+        {
+          "task": "inspect air conditioning refrigerant",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect brake hoses and lines",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect drive shafts and boots",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect exhaust pipe and muffler",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect front brake disc/pads, calipers",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect rear brake disc/pads",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They marked both this and 'Inspect rear brake drums/linings (if equipped)' done. Maybe I should check which is actually equipped in my car"
+            }
+          ]
+        },
+        {
+          "task": "inspect rear brake drums/linings (if equipped)",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They marked both this and 'Inspect rear brake disc/pads' done. Maybe I should check which is actually equipped in my car"
+            }
+          ]
+        },
+        {
+          "task": "inspect steering gear box, linkage & boots/lower arm ball joint, upper arm ball joint",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect suspension mounting bolts",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "replace climate control air filter (for evaporator and blower unit)",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They checked off the box on my checklist and wrote some numbers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "every 30,000 miles (48,000 km) or 24 months",
+      "tasks": [
+        {
+          "task": "inspect brake/clutch (if equipped) fluid",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect fuel filter",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect fuel lines, fuel hoses and connections",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect fuel tank air filter (if equipped)",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They left an 'N/A' on my checklist, so maybe my car doesn't have one"
+            }
+          ]
+        },
+        {
+          "task": "inspect parking brake",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They just checked off the box on my checklist, no other notes"
+            }
+          ]
+        },
+        {
+          "task": "inspect vapor hose and fuel filler cap",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They pointed out the cap doesn't click but it functions properly otherwise"
+            }
+          ]
+        },
+        {
+          "task": "replace air cleaner filter",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They checked off the box on my checklist and wrote some numbers"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "every 37,500 miles (60,000 km) or 30 months",
+      "tasks": [
+        {
+          "task": "inspect manual transaxle fluid (if equipped)",
+          "history": [
+            {
+              "date": "2020-07-20",
+              "mileage": 49269,
+              "by": "Coastal Auto Repair",
+              "address": "1625 Garnet Ave, San Diego, CA, 92109",
+              "notes": "They left an 'N/A' on my checklist, so maybe my car doesn't have it"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "frequency": "first at 60,000 miles (96,000 km) or 72 months; After, every 15,000 miles (24,000 km) or 24 months",
+      "tasks": [
+        {
+          "task": "inspect drive belts"
+        }
+      ]
+    },
+    {
+      "frequency": "first at 60,000 miles (96,000 km) or 60 months; After, every 30,000 miles (48,000 km) or 24 months",
+      "tasks": [
+        {
+          "task": "replace coolant"
+        }
+      ]
+    },
+    {
+      "frequency": "every 105,000 miles (168,000 km) or 84 months",
+      "tasks": [
+        {
+          "task": "replace spark plugs (iridium coated)"
+        }
+      ]
+    }
+  ]
+}
