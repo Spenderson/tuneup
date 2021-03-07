@@ -1,6 +1,6 @@
 # TuneUp
 
-This is the Github folder for collaboration on TuneUp - the system that handles personal car maintenance.
+For collaboration on TuneUp - the system that handles personal car maintenance.
 
 ### CARD_OBD_1968_2.pdf
 
