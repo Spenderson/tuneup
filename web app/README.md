@@ -1,4 +1,4 @@
-Application to track my car maintenance. Information is stored in JSON files, which an application needs to read and write to based on user input. 
+Starting the project off by just creating a simple web app. Nothing fancy, just want to get something built.
 
 ### log.json
 
